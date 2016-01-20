@@ -18,8 +18,8 @@ def clear(im):
     width, height = im.size
 
     flag = 0
-    x = 1
-    y = 1
+    x = 3
+    y = 3
 
     def noise(x,y):
     #To determine whether the pixel is noise or not depending on the colors of the four pixels from each of which are two units aparts.
@@ -53,7 +53,7 @@ def clear(im):
             #print y % 15
             for x in range(width):
                 #If every pixel is white, flag remains the same
-                if x % 15 == 13 or 14:
+                if (x % 15 == 13) or (x % 15 == 14):
                     if data[x, y] > 200:
                         continue
                     #If the pixel is black, raise the flag

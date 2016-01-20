@@ -1,5 +1,0 @@
-Tesseract Open Source OCR Engine
-name_to_image_type:Error:Unrecognized image type:bath.png
-IMAGE::read_header:Error:Can't read this image type:bath.png
-Tessedit:Error:Read of file failed:bath.png
-Signal_exit 31 ABORT. LocCode: 3  AbortCode: 3

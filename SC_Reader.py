@@ -9,14 +9,14 @@ from bath import *
 import os
 
 def image_to_string(img, cleanup=True, plus =''):
-    os.popen('tesseract bath_again.png result')
+    os.popen('tesseract bath.png result')
     text = file('result.txt').read().strip()
     if cleanup:
         os.remove('result.txt')
     return text
 
 def code():
-    im = Image.open(r'C:\Users\heluoyichong\PycharmProjects\SecurityCode\screenshot.png')
+    im = Image.open(r'C:\Users\heluoyichong\PycharmProjects\SecurityCode\CrackBooking\screenshot.png')
     left = 640
     top = 160
     right = 760
