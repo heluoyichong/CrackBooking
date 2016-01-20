@@ -1,4 +1,4 @@
-#To find the small black dots
+#To clear the remaining black squares after the first bath
 
 try:
     import Image
@@ -22,6 +22,15 @@ def clear(im):
     y = 1
 
     def noise(x,y):
+    #To determine whether the pixel is noise or not depending on the colors of the four pixels from each of which are two units aparts.
+    #The pixel is reckoned as noise where the four pixels are all while dots.
+    #    o
+    #
+    # o  i  o
+    #
+    #    o
+    # (noise)
+
         check = True
         i = x
         j = y
@@ -50,7 +59,6 @@ def clear(im):
                     #If the pixel is black, raise the flag
                     if data[x, y] < 200:
                         #If the pixel is noise, wipe it out
-
                         #print "(" + str(x) + "," + str(y) + ")"
                         if noise(x,y) == 1:
                             data[x,y] = 255

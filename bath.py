@@ -1,6 +1,8 @@
 import PIL.Image
 import sys
 
+from clearNoise import *
+
 # python chop.py [chop-factor] [in-file] [out-file]
 
 def bath(im):
@@ -70,5 +72,5 @@ def bath(im):
             # Skip this sequence we just altered.
             y += total
 
-    return im;
+    return clear(im);
 

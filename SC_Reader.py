@@ -4,8 +4,6 @@ except ImportError:
     from PIL import Image
 
 from bath import *
-from clearNoise import *
-
 #from pytesser import image_to_string
 
 import os
@@ -25,7 +23,7 @@ def code():
     bottom = 220
     im_crop = im.crop((left, top, right, bottom)) # defines crop points
     im_crop.save("crop.png")
-    clear(bath(im_crop)).save("bath.png")
-    return image_to_string('bath_again.png')
+    bath(im_crop).save("bath.png")
+    return image_to_string('bath.png')
 
 print(code())
